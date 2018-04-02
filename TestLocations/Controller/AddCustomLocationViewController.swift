@@ -59,4 +59,9 @@ extension AddCustomLocationViewController: UITextFieldDelegate {
         
         return range.length == string.count
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

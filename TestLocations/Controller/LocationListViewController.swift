@@ -87,7 +87,10 @@ class LocationListViewController: UIViewController {
             guard
                 let placemarks = placemarks,
                 let location = placemarks.first?.location
-                else { return }
+                else {
+                    self.showAlert(title: "Not Found", message: "Couldn't find the location which you entered, Please enter proper location.")
+                    return
+            }
             
             coordinate = location.coordinate
             self.locations.append(GeoLocation(cooridinate: location.coordinate, name: name))
