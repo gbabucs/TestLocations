@@ -59,6 +59,7 @@ class LocationListViewController: UIViewController {
         }
         
         start()
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.reloadData()
     }
     
