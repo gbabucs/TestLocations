@@ -18,7 +18,7 @@ class AddCustomLocationViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     //--------------------------------------------------------------------------
-    // MARK: - IBOutlet
+    // MARK: - View Life Cycle
     //--------------------------------------------------------------------------
     
     override func viewDidLoad() {
@@ -43,5 +43,20 @@ class AddCustomLocationViewController: UIViewController {
     @IBAction func close(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+}
 
+//--------------------------------------------------------------------------
+// MARK: - UITextFieldDelegate
+//--------------------------------------------------------------------------
+
+extension AddCustomLocationViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let regex = try! NSRegularExpression(pattern: "[a-zA-Z\\s]+", options: [])
+        let range = regex.rangeOfFirstMatch(in: string, options: [], range: NSRange(location: 0, length: string.count))
+        
+        return range.length == string.count
+    }
 }

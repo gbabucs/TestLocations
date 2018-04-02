@@ -10,10 +10,6 @@ import UIKit
 
 class LocationViewCell: UITableViewCell {
     
-    override var reuseIdentifier: String? {
-        return "LocationViewCell"
-    }
-
     //--------------------------------------------------------------------------
     // MARK: - IBOutlet
     //--------------------------------------------------------------------------
