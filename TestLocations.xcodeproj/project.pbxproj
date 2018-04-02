@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E79E257120725B4A00DEF03A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E257020725B4A00DEF03A /* AppDelegate.swift */; };
-		E79E257320725B4A00DEF03A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E257220725B4A00DEF03A /* ViewController.swift */; };
+		E79E257320725B4A00DEF03A /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E257220725B4A00DEF03A /* LocationListViewController.swift */; };
 		E79E257620725B4A00DEF03A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79E257420725B4A00DEF03A /* Main.storyboard */; };
 		E79E257820725B4A00DEF03A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79E257720725B4A00DEF03A /* Assets.xcassets */; };
 		E79E257B20725B4A00DEF03A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79E257920725B4A00DEF03A /* LaunchScreen.storyboard */; };
+		E79E258420725CCD00DEF03A /* AddCustomLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E258320725CCD00DEF03A /* AddCustomLocationViewController.swift */; };
+		E79E258720725CFC00DEF03A /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E258620725CFC00DEF03A /* GeoLocation.swift */; };
+		E79E258A20725D6000DEF03A /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E258920725D6000DEF03A /* LocationViewCell.swift */; };
+		E79E258D20725E1B00DEF03A /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E258C20725E1B00DEF03A /* NotificationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E79E256D20725B4A00DEF03A /* TestLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79E257020725B4A00DEF03A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E79E257220725B4A00DEF03A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E79E257220725B4A00DEF03A /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		E79E257520725B4A00DEF03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E79E257720725B4A00DEF03A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79E257A20725B4A00DEF03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E79E257C20725B4A00DEF03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79E258320725CCD00DEF03A /* AddCustomLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomLocationViewController.swift; sourceTree = "<group>"; };
+		E79E258620725CFC00DEF03A /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
+		E79E258920725D6000DEF03A /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
+		E79E258C20725E1B00DEF03A /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,66 @@
 		E79E256F20725B4A00DEF03A /* TestLocations */ = {
 			isa = PBXGroup;
 			children = (
-				E79E257020725B4A00DEF03A /* AppDelegate.swift */,
-				E79E257220725B4A00DEF03A /* ViewController.swift */,
-				E79E257420725B4A00DEF03A /* Main.storyboard */,
+				E79E258F20725F5600DEF03A /* Storyboard */,
+				E79E258E20725F3500DEF03A /* Application */,
+				E79E258B20725DF900DEF03A /* Extensions */,
+				E79E258820725D3400DEF03A /* CustomCell */,
+				E79E258520725CE100DEF03A /* Model */,
+				E79E258220725CB500DEF03A /* Controller */,
 				E79E257720725B4A00DEF03A /* Assets.xcassets */,
 				E79E257920725B4A00DEF03A /* LaunchScreen.storyboard */,
 				E79E257C20725B4A00DEF03A /* Info.plist */,
 			);
 			path = TestLocations;
+			sourceTree = "<group>";
+		};
+		E79E258220725CB500DEF03A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E79E257220725B4A00DEF03A /* LocationListViewController.swift */,
+				E79E258320725CCD00DEF03A /* AddCustomLocationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E79E258520725CE100DEF03A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E79E258620725CFC00DEF03A /* GeoLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E79E258820725D3400DEF03A /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				E79E258920725D6000DEF03A /* LocationViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		E79E258B20725DF900DEF03A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E79E258C20725E1B00DEF03A /* NotificationExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E79E258E20725F3500DEF03A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E79E257020725B4A00DEF03A /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E79E258F20725F5600DEF03A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E79E257420725B4A00DEF03A /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79E257320725B4A00DEF03A /* ViewController.swift in Sources */,
+				E79E258D20725E1B00DEF03A /* NotificationExtension.swift in Sources */,
+				E79E258720725CFC00DEF03A /* GeoLocation.swift in Sources */,
+				E79E258A20725D6000DEF03A /* LocationViewCell.swift in Sources */,
+				E79E257320725B4A00DEF03A /* LocationListViewController.swift in Sources */,
 				E79E257120725B4A00DEF03A /* AppDelegate.swift in Sources */,
+				E79E258420725CCD00DEF03A /* AddCustomLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
